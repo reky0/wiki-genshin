@@ -1,0 +1,98 @@
+body {
+    align-items: center;
+    background-color: #343434;
+}
+
+#form {
+    transition: 1s;
+}
+
+form {
+    margin-top: 15%;
+    padding: 50px;
+    background-color: lightsteelblue;
+}
+
+form * {
+    margin: 5px;
+}
+
+form input {
+    border-radius: 20px;
+    width: 90%;
+}
+
+form #login {
+    background-color: transparent;
+    border: none;
+}
+
+#icon {
+    margin-left: -35px;
+}
+
+#login {
+    transition: 1s;
+    width: 200px;
+    margin-left: 40%;
+    text-align: center; 
+    text-decoration: none;
+    color: black;
+}
+
+#pyro {
+    margin-left: 50%;
+    border-radius: 100%;
+    transition: 1s;
+}
+
+#titulo {
+    color: white;
+    font-size: 30px;
+    text-align: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#anemo {
+    margin-left: 30%;
+    border-radius: 100%;
+    transition: 4s;
+}
+
+#hydro {
+    margin-top: 60%;
+    margin-left: 10%;
+    border-radius: 100%;
+    transition: 1.5s;
+
+}
+
+#electro {
+    margin-top: 60%;
+    margin-left: 50%;
+    border-radius: 100%;
+    transition: 3.5s;
+
+}
+
+#dendro {
+    margin-left: 40%;
+    border-radius: 100%;
+    transition: 2s;
+
+}
+
+#cryo {
+    margin-top: 20%;
+    margin-left: 40%;
+    border-radius: 100%;
+    transition: 2.5s;
+
+}
+
+#geo {
+    margin-left: 40%;
+    border-radius: 100%;
+    transition: 3s;
+
+}

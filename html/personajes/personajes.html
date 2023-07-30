@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/personajes.css">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/personajes.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--MENU DE ARRIBA-->
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid" id="contenedor">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar barra-arriba"></span>
+                            <span class="icon-bar barra-medio"></span>
+                            <span class="icon-bar barra-abajo"></span>
+                        </button>
+                        <a class="navbar-brand" href="https://genshin.hoyoverse.com/es/home" target="_blank"
+                            title="Página oficial de Genshin Impact">
+                            <img id="logo" src="../../img/logo.png" alt="LOGO">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Zonas
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="../zonas/mondstadt.html">Mondstadt</a>
+                                    </li>
+                                    <li>
+                                        <a href="../zonas/liyue.html">Liyue</a>
+                                    </li>
+                                    <li>
+                                        <a href="../zonas/inazuma.html">Inazuma</a>
+                                    </li>
+                                    <li>
+                                        <a href="../zonas/sumeru.html">Sumeru</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    Enemigos
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="../enemigos/semanales/semanales.html">Semanales</a>
+                                    </li>
+                                    <li>
+                                        <a href="../enemigos/jefes/jefes.html">Jefes</a>
+                                    </li>
+                                    <li>
+                                        <a href="../enemigos/elite/elite.html">Élite</a>
+                                    </li>
+                                    <li>
+                                        <a href="../enemigos/normal/normal.html">Normal</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="html/personajes/personajes.html">Personajes</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar navbar-nav navbar-right">
+                            <li id="login">
+                                <a href="../login.html"><span class="glyphicon glyphicon-user"></span> Iniciar    Sesión</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container fadein">
+            <div class="row filtro">
+                <div class="col-lg-12 col-xs-12">
+                    <button onclick="filtroPyro()"><img class="elemento" src="../../img/elemento-pyro.png"
+                            alt=""></button>
+                    <button onclick="filtroHydro()"><img class="elemento" src="../../img/elemento-hydro.png"
+                            alt=""></button>
+                    <button onclick="filtroAnemo()"><img class="elemento" src="../../img/elemento-anemo.png"
+                            alt=""></button>
+                    <button onclick="filtroElectro()"><img class="elemento" src="../../img/elemento-electro.png"
+                            alt=""></button>
+                    <button onclick="filtroDendro()"><img class="elemento" src="../../img/elemento-dendro.png"
+                            alt=""></button>
+                    <button onclick="filtroCryo()"><img class="elemento" src="../../img/elemento-cryo.png"
+                            alt=""></button>
+                    <button onclick="filtroGeo()"><img class="elemento" src="../../img/elemento-geo.png"
+                            alt=""></button>
+
+                    <div class="separador-vertical"></div>
+
+                    <button onclick="filtroEspada()"><img class="arma" src="../../img/icono-espada.png" alt=""></button>
+                    <button onclick="filtroMandoble()"><img class="arma" src="../../img/icono-mandoble.png"
+                            alt=""></button>
+                    <button onclick="filtroLanza()"><img class="arma" src="../../img/icono-lanza.png" alt=""></button>
+                    <button onclick="filtroCatalizador()"><img class="arma" src="../../img/icono-catalizador.png"
+                            alt=""></button>
+                    <button onclick="filtroArco()"><img class="arma" src="../../img/icono-arco.png" alt=""></button>
+                    <button onclick="normal()" id="boton-reset">TODOS</button>
+                </div>
+            </div>
+
+            <div class="row contenido">
+                <div class="col-lg-2 col-xs-3 icono-personaje geo espada">
+                    <div class="row">
+                        <a href="../personajes/albedo.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/albedo_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Albedo</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo arco">
+                    <div class="row">
+                        <a href="../personajes/aloy.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/aloy_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Aloy</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro arco">
+                    <div class="row">
+                        <a href="../personajes/amber.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/amber_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Amber</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje geo mandoble">
+                    <div class="row">
+                        <a href="../personajes/itto.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/arataki_itto_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Arataki Itto</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro mandoble">
+                    <div class="row">
+                        <a href="../personajes/beidou.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/beidou_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Beidou</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro espada">
+                    <div class="row">
+                        <a href="../personajes/bennett.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/bennett_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Bennet</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro catalizador">
+                    <div class="row">
+                        <a href="../personajes/barbara.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/barbara_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Bárbara</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro lanza">
+                    <div class="row">
+                        <a href="../personajes/candace.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/candace_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Candace</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo mandoble">
+                    <div class="row">
+                        <a href="../personajes/chongyun.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/chongyun_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Chongyun</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje dendro arco">
+                    <div class="row">
+                        <a href="../personajes/collei.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/collei_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Collei</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro lanza">
+                    <div class="row">
+                        <a href="../personajes/cyno.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/cyno_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Cyno</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro mandoble">
+                    <div class="row">
+                        <a href="../personajes/diluc.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/diluc_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Diluc</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo arco">
+                    <div class="row">
+                        <a href="../personajes/diona.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/diona_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Diona</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro mandoble">
+                    <div class="row">
+                        <a href="../personajes/dori.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/dori_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Dori</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo mandoble">
+                    <div class="row">
+                        <a href="../personajes/eula.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/eula_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Eula</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro arco">
+                    <div class="row">
+                        <a href="../personajes/fischl.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/fischl_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Fischl</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo arco">
+                    <div class="row">
+                        <a href="../personajes/ganyu.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/ganyu_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Ganyu</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje geo arco">
+                    <div class="row">
+                        <a href="../personajes/gorou.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/gorou_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Gorou</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro lanza">
+                    <div class="row">
+                        <a href="../personajes/hutao.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/hu_tao_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Hu Tao</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo espada">
+                    <div class="row">
+                        <a href="../personajes/jean.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/jean_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Jean</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo espada">
+                    <div class="row">
+                        <a href="../personajes/kazuha.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/kaedehara_kazuha_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Kaedehara Kazuha</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo espada">
+                    <div class="row">
+                        <a href="../personajes/kaeya.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/kaeya_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Kaeya</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo espada">
+                    <div class="row">
+                        <a href="../personajes/ayaka.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/kamisato_ayaka_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Kamisato Ayaka</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro espada">
+                    <div class="row">
+                        <a href="../personajes/ayato.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/kamisato_ayato_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Kamisato Ayato</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro espada">
+                    <div class="row">
+                        <a href="../personajes/keching.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/keqing_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Keching</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro catalizador">
+                    <div class="row">
+                        <a href="../personajes/klee.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/klee_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Klee</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro arco">
+                    <div class="row">
+                        <a href="../personajes/sara.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/kujou_sara_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Kujou Sara</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro espada">
+                    <div class="row">
+                        <a href="../personajes/shinobu.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/kuki_shinobu_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Kuki Shinobu</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo espada">
+                    <div class="row">
+                        <a href="../personajes/layla.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/layla_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Laila</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro catalizador">
+                    <div class="row">
+                        <a href="../personajes/lisa.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/lisa_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Lisa</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro catalizador">
+                    <div class="row">
+                        <a href="../personajes/mona.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/mona_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Mona</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje dendro catalizador">
+                    <div class="row">
+                        <a href="../personajes/nahida.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/nahida_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Nahida</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro espada">
+                    <div class="row">
+                        <a href="../personajes/nilou.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/nilou_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Nilou</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje geo catalizador">
+                    <div class="row">
+                        <a href="../personajes/ninguang.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/ningguang_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Ninguang</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje geo mandoble">
+                    <div class="row">
+                        <a href="../personajes/noelle.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/noelle_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Noelle</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo espada">
+                    <div class="row">
+                        <a href="../personajes/qiqi.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/qiqi_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Qiqi</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro mandoble">
+                    <div class="row">
+                        <a href="../personajes/razor.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/razor_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Razor</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo lanza">
+                    <div class="row">
+                        <a href="../personajes/rosaria.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/rosaria_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Rosaria</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo catalizador">
+                    <div class="row">
+                        <a href="../personajes/sacarosa.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/sucrose_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Sacarosa</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro catalizador">
+                    <div class="row">
+                        <a href="../personajes/kokomi.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/sangonomiya_kokomi_portrait.webp"
+                                alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Sangonomiya Kokomi</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo mandoble">
+                    <div class="row">
+                        <a href="../personajes/sayu.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/sayu_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Sayu</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje cryo lanza">
+                    <div class="row">
+                        <a href="../personajes/shenhe.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/shenhe_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Shenhe</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo catalizador">
+                    <div class="row">
+                        <a href="../personajes/heizou.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/shikanoin_heizou_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Shikanoin Heizou</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro espada">
+                    <div class="row">
+                        <a href="../personajes/raiden.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/raiden_shogun_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Shogun Raiden</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro arco">
+                    <div class="row">
+                        <a href="../personajes/tartaglia.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/tartaglia_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Tartaglia</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro lanza">
+                    <div class="row">
+                        <a href="../personajes/thoma.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/thoma_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Thoma</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje dendro arco">
+                    <div class="row">
+                        <a href="../personajes/tignari.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/tighnari_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Tignari</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo arco">
+                    <div class="row">
+                        <a href="../personajes/venti.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/venti_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Venti</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo anemo dendro electro geo espada">
+                    <div class="row">
+                        <a href="../personajes/viajero.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/traveler_anemo_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Viajero</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro lanza">
+                    <div class="row">
+                        <a href="../personajes/xiangling.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/xiangling_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Xiangling</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje anemo lanza">
+                    <div class="row">
+                        <a href="../personajes/xiao.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/xiao_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Xiao</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro espada">
+                    <div class="row">
+                        <a href="../personajes/xingchiu.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/xingqiu_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Xingchiu</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro mandoble">
+                    <div class="row">
+                        <a href="../personajes/xinyan.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/xinyan_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Xinyan</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje electro catalizador">
+                    <div class="row">
+                        <a href="../personajes/yae.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/yae_miko_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Yae Miko</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro catalizador">
+                    <div class="row">
+                        <a href="../personajes/yanfei.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/yanfei_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Yanfei</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje hydro arco">
+                    <div class="row">
+                        <a href="../personajes/yelan.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/yelan_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Yelan</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje pyro arco">
+                    <div class="row">
+                        <a href="../personajes/yoimiya.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/yoimiya_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Yoimiya</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje geo lanza">
+                    <div class="row">
+                        <a href="../personajes/yunjin.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/yun_jin_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Yun Jin</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-xs-3 icono-personaje geo lanza">
+                    <div class="row">
+                        <a href="../personajes/zhongli.html"><img class="foto-personaje" src="../../img/personajes/iconos-personajes/zhongli_portrait.webp" alt=""></a>
+                    </div>
+                    <div class="row nombre-personaje">
+                        <p>Zhongli</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

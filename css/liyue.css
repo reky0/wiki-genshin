@@ -1,0 +1,114 @@
+body {
+    background-image: url(../img/fondo-liyue.webp);
+    background-size:cover;
+    font-family: 'Verdana';
+}
+
+#contenedor {
+    background-color: #343434;
+}
+
+#logo {
+    width: 80px;
+    height: 50px;
+    margin-top: -15px;
+}
+
+#login {
+    padding: 15px;
+    text-align: center;
+    list-style-type: none;
+}
+
+
+#contenedor-texto {
+    background-color: rgb(204, 181, 65);
+    color: black;
+    border-radius: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+#titulo-nacion {
+    font-size: xx-large;
+    margin-bottom: 20px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    font-weight: bold;
+}
+
+.nav-tabs li a {
+    color: black;
+}
+
+.nav-tabs li a:hover, .nav-tabs li a:focus {
+    border-color: transparent;
+    background-color: rgba(121, 110, 39, 0.513);
+    color: rgb(0, 0, 0);
+}
+
+.nav-tabs li.active a, .nav-tabs li.active a:focus, .nav-tabs li.active a:hover {
+    color: white;
+    cursor: default;
+    background-color: rgb(133, 114, 45);
+    border: none;
+    border-bottom-color: none;
+    border-bottom-color: none;
+}
+
+.tab-content {
+    border: 1px solid black;
+    padding: 10px;
+    padding-left: -20px;
+}
+
+.personajes img {
+    min-width: max-content;
+    min-height: max-content;
+}
+
+.personajes .row {
+    margin-bottom: 10px;
+}
+
+.nombre-personaje {
+    text-align: left;
+    margin-top: 20px;
+    font-weight: 500;
+    width: 200px;
+}
+
+.col-xs-4 >.nombre-personaje {
+    width: 300px;
+}
+
+.imagen-personaje {
+    width: 100px;
+    height: 280px;
+    margin-bottom: 20px;
+}
+
+.nombre-dominio {
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 100px;
+    width: 200px;
+}
+
+.imagen-dominio {
+    width: 170px;
+    height: 170px;
+}
+
+.nombre-jefe {
+    text-align: center;
+    width: 1200px;
+}
+
+.imagen-jefe {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}

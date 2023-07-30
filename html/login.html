@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+        <script src="../js/jquery.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/login.js"></script>
+        <title>Guía Genshin Impact | Iniciar Sesión</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <br><br>
+            <div class="row" id="rowArriba">
+                <div class="col-lg-4 col-xs-4">
+                    <img id="pyro" src="../img/elemento-pyro.png" alt="">
+                </div>
+                <div id="titulo" class="col-lg-4 col-xs-4">Guía Genshin Impact</div>
+                <div class="col-lg-4 col-xs-4">
+                    <img id="anemo" src="../img/elemento-anemo.png" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-xs-2">
+                    <img id="hydro" src="../img/elemento-hydro.png" alt="">
+                </div>
+                <div class="col-lg-6 col-xs-8">
+                    <form action="post" id="form">
+                        <div>
+                            <b>Usuario</b>
+                            <input type="text" name="usuario" id="a">
+                        </div>
+                        <div>
+                            <b>Contraseña</b>
+                            <input type="password" name="contraseña" id="passwd">
+                            <a onclick="showPassword()">
+                                <span id="icon" class="glyphicon glyphicon-eye-close"></span>
+                            </a>
+                        </div>
+                        <div>
+                            <a id="login" href="../index.html" onmouseover="animacionIconos()" onmouseout="fueraAnimacion()">Iniciar Sesión</a>   
+                        </div>                        
+                    </form>
+                </div>
+                <div class="col-lg-3 col-xs-2">
+                    <img id="electro" src="../img/elemento-electro.png" alt="">
+                </div>
+            </div>
+
+            <br><br><br>    
+
+            <div class="row">
+                <div class="col-lg-4 col-xs-4">
+                    <img id="dendro" src="../img/elemento-dendro.png" alt="">
+                </div>
+                <div class="col-lg-4 col-xs-4">
+                    <img id="cryo" src="../img/elemento-cryo.png" alt="">
+                </div>
+                <div class="col-lg-4 col-xs-4">
+                    <img id="geo" src="../img/elemento-geo.png" alt="">
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </body>
+</html>
